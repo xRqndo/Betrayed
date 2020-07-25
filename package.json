@@ -1,0 +1,33 @@
+{
+  "name": "betrayed",
+  "version": "1.0.0",
+  "description": "Betrayed Discord Bot Using Discord.js",
+  "main": "src/index.js",
+  "dependencies": {
+    "ascii-table": "^0.0.9",
+    "discord.js": "^12.2.0",
+    "djs-commands": "^1.2.2",
+    "eris": "^0.13.3",
+    "eslint": "^7.5.0",
+    "glob": "^7.1.6",
+    "moment": "^2.27.0",
+    "ms": "^2.1.2",
+    "pagination": "^0.4.6",
+    "path": "^0.12.7",
+    "promisify": "0.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xRqndo/Betrayed-Discord.JS.git"
+  },
+  "author": "xRqndo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xRqndo/Betrayed-Discord.JS/issues"
+  },
+  "homepage": "https://github.com/xRqndo/Betrayed-Discord.JS#readme"
+}
