@@ -1,4 +1,4 @@
 node_modules
 Procfile
-run.bat
-config.json
+run
+config
