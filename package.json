@@ -11,14 +11,17 @@
     "eslint": "^7.5.0",
     "glob": "^7.1.6",
     "moment": "^2.27.0",
+    "mongoose": "^5.9.25",
     "ms": "^2.1.2",
     "pagination": "^0.4.6",
     "path": "^0.12.7",
-    "promisify": "0.0.3"
+    "promisify": "0.0.3",
+    "quick.db": "^7.1.1"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test" : "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/index.js"
   },
   "repository": {
     "type": "git",

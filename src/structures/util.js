@@ -22,19 +22,28 @@ module.exports = class Util {
             return `${path.dirname(require.main.filename)}${path.sep}`;
         }
 
+        formatBytes(bytes) {
+             if (bytes === 0) return '0 Bytes';
+            const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(1024));
+            return `${parseFloat((bytes / Math.pow(1024, i)).toFixed(2))} ${sizes[i]}`;;
+        }
+
         removeDuplicates(arr) {
             return [...new Set(arr)];
         }
 
-        capitalise(string) {
-            return string.split(' ').map(str => str.slice(0, 1).toUpperCase() + str.slice(1)).join(' ')
+        trimArray(arr, maxLen = 10) {
+            if (arr.length > maxLen) {
+            const len = arr.length - maxLen,
+            arr = arr.slice(0, maxLen);
+            arr.push(`${len} more...`);
+        }
+            return arr;
         }
 
-        formatBytes(bytes) {
-            if (bytes === 0) return '0 Bytes';
-            const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
-            const i = Math.floor(Math.log(bytes) / Math.log(1024));
-            return `${parseFloat((bytes / Math.pow(1024, i)).toFixed(2))} ${sizes[i]}`;;
+        capitalise(string) {
+            return string.split(' ').map(str => str.slice(0, 1).toUpperCase() + str.slice(1)).join(' ')
         }
 
         async loadCommands() {
@@ -49,7 +58,7 @@ module.exports = class Util {
                     this.client.commands.set(command.name, command);
                     if(command.aliases.length) {
                         for (const alias of command.aliases) {
-                            this.client.aliases.set(alias, command.dirname);
+                            this.client.aliases.set(alias, command.name);
                         }
                     }
                 }
@@ -70,13 +79,4 @@ module.exports = class Util {
             })
         }
   
-
-    trimArray(arr, maxien = 10) {
-        if (arr.length > maxien) {
-        const len = arr.length - maxien,
-        arr = arr.slice(0, maxien)
-        arr.push(`${len} more..`);
         }
-        return arr;
-    }
-}

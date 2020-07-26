@@ -1,4 +1,4 @@
-const Event = require('../Structures/Event')
+const Event = require('../../Structures/Event')
 
 module.exports = class extends Event {
 
@@ -14,5 +14,6 @@ module.exports = class extends Event {
             `Loaded ${this.client.commands.size} Commands..`,
             `Loaded ${this.client.events.size} Events.`
         ].join('\n'))
+        this.client.user.setActivity('In Development | Developed By xRqndo')
     }
 }

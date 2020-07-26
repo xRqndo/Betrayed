@@ -35,11 +35,8 @@ module.exports = class extends Command {
             `**Platform:** ${process.platform}`,
             '**CPU:**',
             `\u3000 Cores: ${os.cpus().length}`,
-            `\u3000 Cores: ${core.model}`,
-            `\u3000 Cores: ${core.speed}`,
-            '**Memory**',
-            `\u3000 Total: ${this.client.utils.formatBytes(process.memoryUsage().heapTotal)}`
-            `\u3000 Used: ${this.client.utils.formatBytes(process.memoryUsage().heapUsed)}`
+            `\u3000 Model: ${core.model}`,
+            `\u3000 Speed: ${core.speed}MHz`,
         ])
         .setTimestamp();
         message.channel.send(embed)

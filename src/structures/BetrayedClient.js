@@ -19,8 +19,7 @@ module.exports = class BetrayedClient extends Client {
 
         this.owners = options.owners
     }
-        
-    
+
     validate(options) {
         if (typeof options !== 'object')throw new TypeError('[Type Error] Options Should Be A Type Of Object.');
 
