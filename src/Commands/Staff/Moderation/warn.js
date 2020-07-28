@@ -1,6 +1,6 @@
 const { MessageEmbed, MessageFlags } = require('discord.js');
-const Command = require('../../Structures/Command');
-const warns = require('../../Models/warns')
+const Command = require('../../../Structures/Command')
+const warns = require('../../../Models/warns')
 
 module.exports = class extends Command {
 

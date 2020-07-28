@@ -1,5 +1,5 @@
 const { isNull } = require('util');
-const Command = require('../../Structures/Command')
+const Command = require('../../../Structures/Command')
 
 module.exports = class extends Command {
 

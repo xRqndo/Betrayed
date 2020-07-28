@@ -18,7 +18,9 @@
     "promisify": "0.0.3",
     "quick.db": "^7.1.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^7.5.0"
+  },
   "scripts": {
     "start": "node ./src/index.js"
   },
