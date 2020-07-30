@@ -19,6 +19,8 @@ module.exports = class BetrayedClient extends Client {
 
         this.owners = options.owners
 
+        this.hide = options.hide
+
         this.guildPrivate = options.guildPrivate
     }
 

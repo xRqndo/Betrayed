@@ -13,7 +13,7 @@ module.exports = class extends Command {
     }
     async run(message, args) {
         if(!message.member.hasPermission("KICK_MEMBERS")) {
-            return message.channel.send('You Are Missing Permissions To Run This Command').then(m => m.delete(5000));
+            return message.reply('You are missing the required permissions to run').then(m => m.delete(5000));
         }
         const reason = args.slice(1).join(" ")
 

@@ -1,17 +1,19 @@
 const { MessageEmbed } = require('discord.js')
-const { calendarFormat } = require('moment')
 const Command = require('../../Structures/Command')
 
 module.exports = class extends Command {
 
     constructor(...args) {
         super(...args, {
-            aliases: ['info'],
-            category: 'Utilities'
+            aliases: ['ohelp'],
+            category: 'Owner',
         })
     }
 
     async run(message, [command]) {
+        if(!this.client.owners.includes(message.author.id)) {
+            return message.channel.send('You are not a owner of Betrayed.')
+        }
         const embed = new MessageEmbed()
         .setColor('BLUE')
         .setAuthor(`${message.guild.name} Help Menu`, message.guild.iconURL({dynamic: true}))
@@ -40,11 +42,11 @@ module.exports = class extends Command {
                 `Command Parameters: \`<>\` Is Required \`[]\` Is Optional`,
             ]);
             let categories;
-            if (!this.client.hide.includes(message.author.id)) {
+            if (!this.client.owners.includes(message.author.id)) {
                 categories = this.client.utils.removeDuplicates(this.client.commands.filter(cmd => cmd.category !== 'Love').map(cmd => cmd.category));
             }
-            if (!this.client.hide.includes(message.author.id)) {
-                categories = this.client.utils.removeDuplicates(this.client.commands.filter(cmd => cmd.category !== 'Owner').map(cmd => cmd.category));
+            if (!this.client.owners.includes(message.author.id)) {
+                categories = this.client.utils.removeDuplicates(this.client.commands.filter(cmd => cmd.category !== 'Owner', 'Love').map(cmd => cmd.category));
             } else {
                 categories = this.client.utils.removeDuplicates(this.client.commands.map(cmd => cmd.category));
             }
