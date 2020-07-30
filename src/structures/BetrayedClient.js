@@ -18,6 +18,8 @@ module.exports = class BetrayedClient extends Client {
         this.utils = new Util(this)
 
         this.owners = options.owners
+
+        this.guildPrivate = options.guildPrivate
     }
 
     validate(options) {
