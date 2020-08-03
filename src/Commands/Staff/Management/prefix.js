@@ -1,5 +1,6 @@
 const Command = require('../../../Structures/Command')
-const guildModel = require('../../../Models/Guild')
+const db = require('quick.db')
+const { default_prefix } = require('../../../../config.json')
 
 module.exports = class extends Command {
 
@@ -11,18 +12,9 @@ module.exports = class extends Command {
         })
     }
 
-    async run(message) {
+    async run(message, args) {
         if(!message.member.hasPermission("ADMINISTRATOR")) {
             return message.channel.send('You are missing the permission Adminstrator')
-        }
-
-        const req = guildModel.findOne({ id: message.guild.id })
-        
-        if (!req) {
-            return message.channel.send(`No Prefix Provided`)
-        }
-        if(req) {
-            return message.channel.send(`Prefix was changed to ${req.prefix}`)
         }
     }
 }

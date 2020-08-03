@@ -1,6 +1,5 @@
 const { Client, Collection} = require('discord.js');
 const Util = require('./util')
-
 module.exports = class BetrayedClient extends Client {
 
     constructor(options = {}) {
@@ -34,7 +33,6 @@ module.exports = class BetrayedClient extends Client {
         if(typeof options.prefix !== 'string' ) throw new TypeError('[Type Error] Prefix Should Be A String');
         this.prefix = options.prefix;
         }
-
 
     async start(token = this.token) {
         this.utils.loadCommands();

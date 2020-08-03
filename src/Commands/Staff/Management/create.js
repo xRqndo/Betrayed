@@ -8,7 +8,7 @@ module.exports = class extends Command {
         super(...args, {
             description: 'Creates A Document To The Database',
             usage: '',
-            category: 'Management',
+            category: 'Owner',
         })
     }
     
