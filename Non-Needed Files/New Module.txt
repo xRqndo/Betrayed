@@ -1,0 +1,19 @@
+const Command = require('../../../Structures/Command')
+const { MessageEmbed } = require('discord.js')
+
+module.exports = class extends Command {
+
+    constructor(...args) {
+        super(...args, {
+            description: 'Creates A Document To The Database',
+            usage: '',
+            category: 'Owner',
+        })
+    }
+    
+    async run(message) {
+        if(!message.member.hasPermission("ADMINISTRATOR")) {
+            return message.channel.send('You are missing the permission Adminstrator')
+        }
+    }
+}

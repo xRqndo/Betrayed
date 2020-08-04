@@ -1,0 +1,7 @@
+                    const errembed1 = new MessageEmbed()
+                    .setTitle('RED')
+                    .addField(`Error!`,[
+                        `**Error:** The Database Was Not Able To Make A Documnet For This Server.`,
+                    ])
+                    .setFooter(`Please Dm The Betrayed Developer Team And Notifiy Them Of This Error.`)
+                    message.channel.send(errembed1)

@@ -22,13 +22,6 @@ module.exports = class Util {
             return `${path.dirname(require.main.filename)}${path.sep}`;
         }
 
-        formatBytes(bytes) {
-             if (bytes === 0) return '0 Bytes';
-            const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
-            const i = Math.floor(Math.log(bytes) / Math.log(1024));
-            return `${parseFloat((bytes / Math.pow(1024, i)).toFixed(2))} ${sizes[i]}`;;
-        }
-
         removeDuplicates(arr) {
             return [...new Set(arr)];
         }
@@ -40,6 +33,13 @@ module.exports = class Util {
             arr.push(`${len} more...`);
         }
             return arr;
+        }
+
+        formatBytes(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'] 
+            const i = Math.floor(Math.log(bytes) / Math.log(1024))
+            return `${parseFloat((bytes / Math.pow(1024, i)).toFixed(2))} ${sizes[1]}`
         }
 
         capitalise(string) {

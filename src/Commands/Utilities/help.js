@@ -41,11 +41,8 @@ module.exports = class extends Command {
             ]);
             let categories;
             if (!this.client.hide.includes(message.author.id)) {
-                categories = this.client.utils.removeDuplicates(this.client.commands.filter(cmd => cmd.category !== 'Love').map(cmd => cmd.category));
-            }
-            if (!this.client.hide.includes(message.author.id)) {
                 categories = this.client.utils.removeDuplicates(this.client.commands.filter(cmd => cmd.category !== 'Owner').map(cmd => cmd.category));
-            } else {
+            }  else {
                 categories = this.client.utils.removeDuplicates(this.client.commands.map(cmd => cmd.category));
             }
 
