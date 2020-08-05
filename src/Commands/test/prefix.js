@@ -1,5 +1,5 @@
-const Command = require('../../../Structures/Command')
-const Guild = require('../../../Models/Guild')
+const Command = require('../../Structures/Command')
+const Guild = require('../../Models/Guild')
 const { MessageEmbed } = require('discord.js')
 const { set } = require('mongoose')
 

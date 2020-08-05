@@ -1,0 +1,6 @@
+const errembed1 = new MessageEmbed()
+.setTitle('RED')
+.addField(`Error!`,[
+    `You are missing the Adminstrator permission`,
+])
+message.channel.send(errembed1)
