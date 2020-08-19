@@ -1,4 +1,4 @@
-const Command = require('../../Structures/Command')
+const Command = require('../../../Structures/Command')
 const { MessageEmbed } = require('discord.js')
 const ms = require('ms')
 
@@ -23,7 +23,8 @@ module.exports = class extends Command {
         }
 
         const embed = new MessageEmbed()
-        .setColor('0x179519')
+        .setColor('GREEN')
+        .setTimestamp()
         .addField(`Process Exited!`, [
             `**Process Version:** ${process.version}`,
             `**Process Platform:** ${process.platform}`,

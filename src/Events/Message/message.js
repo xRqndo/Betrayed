@@ -1,5 +1,4 @@
 const Event = require('../../Structures/Event')
-const db = require('../../Models/Guild')
 
 module.exports = class extends Event {
 

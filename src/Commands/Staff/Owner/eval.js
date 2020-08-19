@@ -1,4 +1,4 @@
-const Command = require('../../Structures/Command')
+const Command = require('../../../Structures/Command')
 const beautify = require('beautify')
 const { MessageEmbed, Discord } = require('discord.js')
 

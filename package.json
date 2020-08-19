@@ -4,20 +4,32 @@
   "description": "Betrayed Discord Bot Using Discord.js",
   "main": "src/index.js",
   "dependencies": {
+    "animequote": "^1.1.1",
     "ascii-table": "^0.0.9",
     "beautify": "0.0.8",
     "discord.js": "^12.2.0",
     "djs-commands": "^1.2.2",
+    "dotenv": "^8.2.0",
     "eris": "^0.13.3",
     "eslint": "^7.5.0",
     "glob": "^7.1.6",
+    "imageapi.js": "^1.0.10",
+    "kitsu": "^10.0.0-alpha.5",
+    "mathjs": "^7.1.0",
     "moment": "^2.27.0",
     "mongoose": "^5.9.25",
     "ms": "^2.1.2",
+    "mysql2": "^2.1.0",
+    "node-fetch": "^2.6.0",
+    "node-superfetch": "^0.1.10",
     "pagination": "^0.4.6",
     "path": "^0.12.7",
     "promisify": "0.0.3",
-    "quick.db": "^7.1.1"
+    "quick.db": "^7.1.1",
+    "sequelize": "^6.3.4",
+    "slappey": "^2.0.0",
+    "superagent": "^6.0.0",
+    "superfetch": "^1.1.1"
   },
   "devDependencies": {
     "eslint": "^7.5.0"

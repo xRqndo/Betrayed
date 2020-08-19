@@ -12,7 +12,7 @@ module.exports = class extends Command {
     async run(message){ 
         const embed = new MessageEmbed()
         .setTitle('Invite')
-        .setDescription('https://discord.gg/DVxavFe')
+        .setURL('https://discord.gg/DVxavFe')
         .setColor('#8af0f2')
         message.channel.send(embed)
     }

@@ -13,14 +13,14 @@ module.exports = class extends Command {
     }
 
     async run(message, args) {
-        if (!message.member.hasPermission("BAN_MEMBERS")) return message.reply('You need the Ban Members permission to use this.')
+        if (!message.member.hasPermission("BAN_MEMBERS")) return message.reply('❌ You need the Ban Members permission to use this.')
         let user = message.mentions.users.first()
-        let reason = args.slice(1).join(" ")
+        let reason = args.slice(1).join(" ") || 'No Reason Provided'
         if (!user) return message.reply('You need to specify a user to ban.')
     
         if (!message.guild.member(user).bannable) return message.reply('Could not ban that user, either they have an higher role or you are just a noob.')
     
-        message.guild.member(user).ban()
+        await message.guild.member(user).ban()
         const embed = new MessageEmbed()
         .setColor('RED')
         .addField(`You Were Banned!`,[

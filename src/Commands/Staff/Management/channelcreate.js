@@ -18,7 +18,6 @@ module.exports = class extends Command {
         }
 
         const name = args[0]
-        const category = message.guild.category.cache;
 
         if(!name) {
             return message.channel.send('You must provide a channel name!')
@@ -27,5 +26,13 @@ module.exports = class extends Command {
         message.guild.channels.create(name, {
             type: 'text',
         })
+        const embed = new MessageEmbed()
+        .setColor('GREEN')
+        .addField(`Channel Created!`, [
+            `**Name:** ${name}`,
+            `**By:** ${message.author.tag} - (${message.author.id})`
+        ])
+        .setTimestamp()
+        message.channel.send(embed)
     }
 }

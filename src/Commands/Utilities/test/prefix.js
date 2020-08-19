@@ -1,5 +1,5 @@
-const Command = require('../../Structures/Command')
-const Guild = require('../../Models/Guild')
+const Command = require('../../../Structures/Command')
+const Guild = require('../../../Models/guildConfig')
 const { MessageEmbed } = require('discord.js')
 const { set } = require('mongoose')
 
@@ -35,9 +35,14 @@ module.exports = class extends Command {
                    if(!guild) {
                    const newGuild = new Guild({
                        _id: Schema.Types.ObjectId,
-                       guildID: String,
+                       guildID: {
+                           required: true,
+                           type: String,
+                           unique: true,
+                       },
                        guildName: String,
                        prefix: {
+                           required: true,
                            default: '.',
                            type: String,
                        },

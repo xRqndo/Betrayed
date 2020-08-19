@@ -1,4 +1,4 @@
-const Command = require('../../Structures/Command')
+const Command = require('../../../Structures/Command')
 const { MessageEmbed, UserFlags } = require(`discord.js`) 
 const moment = require('moment')
 

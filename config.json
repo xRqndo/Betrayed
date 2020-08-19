@@ -1,7 +1,11 @@
 {
-    "prefix" : ".",
-    "token" : "NzMzNDg2ODc5MzY1NzkxNzY0.XxD24w.qHGVHaaswKSw_R0lMlWFUqstjcA",
+    "prefix": ".",
+    "token" : "NzMzNDg2ODc5MzY1NzkxNzY0.XxD24w.j2ASfE6CxcnUvbUXBMv35MdezMc",
     "owners" : ["721020001242447903"],
     "guildPrivate" : ["733490914487435395", "736364821129199656"],
-    "hide" : ["300277400728633344"]
+    "hide" : ["300277400728633344"],
+    "DB_NAME": "Ticket",
+    "DB_HOST": "localhost",
+    "DB_PASS": "TopxSlme",
+    "DB_USER": "xRqndo"
 }

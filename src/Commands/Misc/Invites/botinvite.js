@@ -12,7 +12,7 @@ module.exports = class extends Command {
     async run(message){ 
         const embed = new MessageEmbed()
         .setTitle('Bot Invite')
-        .setDescription('https://discord.com/api/oauth2/authorize?client_id=733486879365791764&permissions=8&scope=bot')
+        .setURL('https://discord.com/api/oauth2/authorize?client_id=733486879365791764&permissions=8&scope=bot')
         .setColor('#8af0f2')
         message.channel.send(embed)
     }

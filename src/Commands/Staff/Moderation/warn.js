@@ -24,7 +24,7 @@ module.exports = class extends Command {
         if(!reason) {
             return message.channel.send(`You Did Not Provide A Reason!`).then(m => m.delete(5000));
         }
-        if(message.member.id === this.client.id){
+        if(user.id === this.client.id){
             return message.channel.send('I cant warn myself!')
         }
         warns.findOne({ Guild: message.guild.id, User: user.id}, async(err, data) => {

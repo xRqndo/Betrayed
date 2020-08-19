@@ -15,12 +15,12 @@ module.exports = class extends Command {
     async run(message, args) {
         if (!message.member.hasPermission("KICK_MEMBERS")) return message.reply('You need the Kick Members permission to use this.')
         let user = message.mentions.users.first()
-        let reason = args.slice(1).join(" ")
+        let reason = args.slice(1).join(" ") || 'No Reason Provided'
         if (!user) return message.reply('You need to specify a user to kick.')
     
         if (!message.guild.member(user).kickable) return message.reply('Could not kick that user, either they have an higher role or you are just a noob.')
     
-        message.guild.member(user).kick()
+        await message.guild.member(user).kick()
         const embed = new MessageEmbed()
         .setColor('RED')
         .addField(`You Were Kicked!`,[
